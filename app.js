@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const { db } = require('./models');
 const { Page, User } = require("./models/index")
 
-app.use(morgan("short"));
+app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: false}));
 
