@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const addPageHTML = require("./../views/addPage")
+const addPageHTML = require("../views/addPage")
+
 
 router.get("/", async (req, res, next) => {
     try {
-        res.send("retrieve all wiki pages");
+        // res.send("retrieve all wiki pages");
+        res.redirect("..")
     } catch (err) {
         next(err);
     }
@@ -20,7 +22,7 @@ router.post("/", async (req, res, next) => {
 
 router.get("/add", async (req, res, next) => {
     try {
-        res.send(addPageHTML);
+        res.send(addPageHTML());
     } catch (err) {
         next (err);
     }

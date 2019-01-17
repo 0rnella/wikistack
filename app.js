@@ -5,6 +5,10 @@ const bodyParser = require("body-parser");
 const { db } = require('./models');
 const { Page, User } = require("./models/index")
 
+const addPageHTML = require("./views/addPage.js")
+
+console.log(addPageHTML)
+
 //middleware to get morgan(logging), public(stylesheets) and bodyparser(decoding urls)
 app.use(morgan("dev"));
 app.use(express.static("public"));
